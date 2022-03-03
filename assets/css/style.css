@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a, a:hover, a:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+}
+
+input,
+select,
+textarea {
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+    outline: none !important;
+}
+
+a,
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.row-g1 {
+    margin-top: calc(-1 * 10px);
+}
+
+.row-g1 > [class*=col] {
+    margin-top: 10px;
+}
+
+.row-g2 {
+    margin-top: calc(-1 * 20px);
+}
+
+.row-g2 > [class*=col] {
+    margin-top: 20px;
+}
+
+.row-g3 {
+    margin-top: calc(-1 * 30px);
+}
+
+.row-g3 > [class*=col] {
+    margin-top: 30px;
+}
+
+.row-g4 {
+    margin-top: calc(-1 * 40px);
+}
+
+.row-g4 > [class*=col] {
+    margin-top: 40px;
+}
+
+.row-g5 {
+    margin-top: calc(-1 * 50px);
+}
+
+.row-g5 > [class*=col] {
+    margin-top: 50px;
+}
+
+.row-g6 {
+    margin-top: calc(-1 * 60px);
+}
+
+.row-g6 > [class*=col] {
+    margin-top: 60px;
+}
+
+.shadow-card {
+    box-shadow: 0 0 14px rgb(144 151 179 / 19%) !important;
+}
+
+.transition {
+    transition: var(--transition);
+}
+
+.color-primary {
+    color: rgb(var(--primary-color));
+}
+
+.btn-customize {
+    background-color: rgb(var(--primary-color));
+    color: var(--white);
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    border-radius: 20px;
+    height: 38px;
+    padding: 0 20px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.btn-customize > i {
+    font-size: .9em;
+}
+
+.btn-customize:hover {
+    color: var(--white);
+    background-color: rgba(var(--primary-color), .85);
+    box-shadow: 0 5px 10px -4px rgb(var(--primary-color)) !important;
+}
+
+.btn-customize_outline {
+    background-color: var(--white);
+    border: 1px solid rgb(var(--primary-color));
+    color: rgb(var(--primary-color));
+}
+
+body {
+    background-color: var(--background-body);
+    color: var(--dark-color);
+    font: 400 14px/1.2 'Roboto', sans-serif;
+}
