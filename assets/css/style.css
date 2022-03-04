@@ -91,6 +91,12 @@ button {
     transition: var(--transition);
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
 .color-primary {
     color: rgb(var(--primary-color));
 }
@@ -128,7 +134,51 @@ button {
 }
 
 body {
-    background-color: var(--background-body);
+    background-color: #fff;
     color: var(--dark-color);
-    font: 400 14px/1.2 'Roboto', sans-serif;
+    font: 400 14px/1.2 'IBM Plex Sans', sans-serif;
+}
+
+.product-card {
+    border-radius: 0;
+    border: 0;
+}
+
+.product-card .card-header {
+    position: relative;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    padding-bottom: 100.0%;
+}
+
+.product-card .card-header > a > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.product-card .card-header > a > img.img-before,
+.product-card .card-header > a:hover > img.img-after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-card .card-header > a:hover > img.img-before {
+    visibility: hidden;
+    opacity: 1;
+}
+
+.product-card .card-body {
+    padding: 10px 0;
+}
+
+.product-card .card-body .card-title > a{
+    color: var(--dark-color);
 }
