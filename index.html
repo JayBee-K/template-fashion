@@ -1,78 +1,423 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Template Fashion</title>
-    <meta name="description" content="Template Telco">
-    <meta name="author" content="">
+	<title>Template Fashion</title>
+	<meta name="description" content="Template Telco">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Template Telco">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Template Telco">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Template Telco">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template Telco">
+	<meta property="og:image" content="">
 
-    <link rel="icon" href="/assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
 
-    <style>
+	<style>
         :root {
-            --dark-color: #1f1d1d;
+            --primary-color: 37, 89, 67;
+            --primary-hover: 20, 67, 47;
+            --dark-color: #121111;
             --gray-color: #8c8484;
             --transition: .3s all ease-in-out;
         }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+		  rel="stylesheet">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 <header id="header" class="header">
 </header>
 
 <div class="main">
-    <div class="section-product section-gap">
-        <div class="container">
-            <div class="row row-cols-lg-4 g-3">
-                <div class="col">
-                    <div class="product-card card">
-                        <div class="card-header">
-                            <a href="">
-                                <img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
-                                <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-title">
-                                <a href="">
-                                    Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
-                                </a>
-                            </div>
-                            <div class="card-price">
-                                <div class="card-price_current">
-                                    269.000đ
-                                </div>
-                            </div>
-                            <div class="card-colors">
-                                <span style="background-color: #000;"></span>
-                                <span style="background-color: #000fff;"></span>
-                                <span style="background-color: #ff0000;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="section-product section-gap">
+		<div class="container">
+			<div class="row row-cols-lg-4 row-col-g1">
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="product-card card">
+						<div class="card-header">
+							<a href="">
+								<img src="./assets/images/product/1-before.jpg" class="img-before img-fluid" alt="">
+								<img src="./assets/images/product/1-after.jpg" class="img-after img-fluid" alt="">
+							</a>
+							<div class="card-header_btn">
+								<a href="javascript:void(0)" class="btn-quick_view">
+									Xem nhanh
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="card-title">
+								<a href="">
+									Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+								</a>
+							</div>
+							<div class="card-price">
+								<a href="">
+									<div class="card-price_current">
+										269.000đ
+									</div>
+									<div class="card-price_old">
+										299.000đ
+									</div>
+								</a>
+							</div>
+							<div class="card-colors">
+								<span class="card-color" style="background-color: #000;"></span>
+								<span class="card-color" style="background-color: #000fff;"></span>
+								<span class="card-color" style="background-color: #ff0000;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer class="footer">
@@ -80,11 +425,11 @@
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
-        src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+		src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script type="text/javascript"
-        src="./assets/plugins/select2/js/select2.min.js"></script>
+		src="./assets/plugins/select2/js/select2.min.js"></script>
 <script type="text/javascript"
-        src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+		src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>
