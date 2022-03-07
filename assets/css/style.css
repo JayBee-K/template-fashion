@@ -220,7 +220,19 @@ body {
 }
 
 .product-card .card-header .card-header_btn > .btn-quick_view:hover {
-    background-color: #141313;
+    background-color: #141313;;
+}
+
+.product-card .card-header .card-header-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-size: .825em;
+    z-index: 2;
 }
 
 .product-card .card-header > a > img {
@@ -284,9 +296,16 @@ body {
 
 .product-card .card-body .card-price .card-price_old {
     margin-left: 8px;
-    font-size: .9em;
+    font-size: .925em;
     text-decoration: line-through;
     color: var(--gray-color);
+    line-height: 1.2;
+}
+
+.product-card .card-body .card-price .card-price_sale {
+    margin-left: 8px;
+    font-size: .925em;
+    color: var(--danger);
     line-height: 1.2;
 }
 
