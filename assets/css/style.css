@@ -644,6 +644,10 @@ body {
     padding-left: 95px;
 }
 
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_photo .preview-photo_item img{
+    cursor: zoom-in;
+}
+
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_photo .preview-photo_item,
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_thumb .preview-thumb_item {
     position: relative;
