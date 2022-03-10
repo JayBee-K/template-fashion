@@ -253,6 +253,53 @@ body {
     font: 400 14px/1.3 'Work Sans', sans-serif;
 }
 
+.header .header-slide {
+    background-color: rgb(var(--primary-color));
+    padding: 10px 0;
+    text-align: center;
+    color: var(--white);
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: .9em;
+}
+
+.header .header-slide .header-slide_item {
+    cursor: grab;
+}
+
+.header .header-slide .header-slide_item:active {
+    cursor: grabbing;
+}
+
+.header .header-bottom {
+    background-color: #F8F8F8;
+    position: relative;
+    padding: 5px 0;
+}
+
+.header .header-bottom .header-bottom_item img {
+    max-width: 100%;
+}
+
+.banner-slide_image {
+    position: relative;
+    padding-bottom: 33%;
+    overflow: hidden;
+}
+
+.banner-slide_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-gap {
+    padding: 50px 0;
+}
+
 .product-card {
     border-radius: 0;
     border: 0;
@@ -581,16 +628,62 @@ body {
     margin-bottom: 25px;
 }
 
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__label,
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_size .product-content_size__label,
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_amount .product-content_amount__label {
     margin-bottom: 8px;
     letter-spacing: 1px;
-    color: rgba(var(--primary-color), .8);
+    color: rgba(var(--primary-color), .9);
 }
 
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid,
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_size .product-content_size__grid {
     display: flex;
     align-items: center;
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item > label {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    border: 2px solid transparent;
+    box-shadow: none;
+    transition: var(--transition);
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item > label > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item + .colors-item {
+    margin-left: 10px;
+}
+
+.modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_colors .product-content_colors__grid .colors-item > input:checked + label {
+    border-color: var(--dark-color);
+    box-shadow: inset 0 0 0 1px var(--dark-color);
 }
 
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_content .product-content_size .size-item > label {
@@ -765,7 +858,7 @@ body {
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_photo .preview-photo_item,
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_thumb .preview-thumb_item {
     position: relative;
-    padding-bottom: 125%;
+    padding-bottom: 100%;
 }
 
 .modal-detail_product .modal-dialog .modal-content .modal-body .modal-product_preview .product-preview_photo .preview-photo_item img,
@@ -793,7 +886,7 @@ body {
 
 .fancybox-bg {
     background-color: #fff;
-    opacity: 1 !important;
+    opacity: 0.5 !important;
 }
 
 .custom-button_wrapper {
