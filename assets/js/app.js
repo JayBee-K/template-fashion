@@ -25,18 +25,12 @@ const handlePopupDetailProduct = function () {
 			watchSlidesProgress: true,
 			slideToClickedSlide: true,
 			direction: "vertical",
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
 		});
+
+
 		const previewPhoto = new Swiper('#preview-photo', {
 			thumbs: {
 				swiper: previewThumb,
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
 			},
 		});
 
@@ -77,12 +71,9 @@ const handleZoomImageProduct = function (elm, previewPhoto, previewThumb) {
                         </div>`;
 
 	let i = 0;
+	let translateTo = 0;
 	$('[data-fancybox=popupDetailGallery]').click(function () {
 		i = 0;
-	});
-
-	$(document).on('click', '[data-fancybox-prev]', function (e) {
-		alert(1);
 	});
 
 	elm.fancybox({
@@ -94,33 +85,22 @@ const handleZoomImageProduct = function (elm, previewPhoto, previewThumb) {
 		arrows: false,
 		wheel: false,
 		clickContent: false, backFocus: false,
-		afterLoad: function () {
+		afterLoad: function (instance, current) {
 			i++;
 			if (i == 1) {
 				$('.fancybox-container').find('.fancybox-inner').append(wrapButton);
 			}
-			$('[data-fancybox-prev]').click(function () {
-				$('#preview-photo .swiper-button-prev, #preview-thumb .swiper-button-prev').trigger('click');
-			});
-			$('[data-fancybox-next]').click(function () {
-				$('#preview-photo .swiper-button-next, #preview-thumb .swiper-button-next').trigger('click');
-			});
 		},
 		beforeShow: function (instance, current) {
 			previewPhoto.slideTo($(`[data-fancybox='popupDetailGallery'][href='${current.src}']`).attr('data-index') - 1);
 			previewThumb.slideTo($(`[data-fancybox='popupDetailGallery'][href='${current.src}']`).attr('data-index') - 1);
+		},
+		afterShow: function (instance, current) {
+			previewThumb.translateTo(($(`[data-fancybox='popupDetailGallery'][href='${current.src}']`).attr('data-index') * -115) + 115, 150);
 		}
 	});
 }
 
-const handleActiveThumb = function (previewThumb, indexSlide, callback) {
-	$(previewThumb.wrapperEl).find('.swiper-slide').removeClass('swiper-slide-thumb-active');
-	$(previewThumb.slides[indexSlide]).addClass('swiper-slide-thumb-active');
-
-	if (typeof callback === 'function') {
-		callback(true);
-	}
-}
 
 /*
 End Popup Detail
