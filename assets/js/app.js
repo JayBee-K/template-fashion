@@ -71,6 +71,26 @@ const handleFloatLocation = function () {
         )
     });
 }
+
+const handleFloatCart = function () {
+    $('.call-cart').click(function () {
+        $('body').addClass('body-open');
+
+        handlePopupAmountProduct(true);
+        handleCloseCart();
+    });
+}
+
+const handleCloseCart = function () {
+    $('#close-cart').click(function () {
+        $('#float-overlay').trigger('click');
+    });
+}
+
+const handleTriggerOverlay = function () {
+    $('#float-overlay').click(() => $('body').removeClass('body-open'));
+}
+
 /*
  Popup Detail
  */
@@ -104,13 +124,13 @@ const handlePopupDetailProduct = function () {
         });
 
         $('#popupDetailProduct').modal('show');
-        handlePopupDetailAmountProduct();
+        handlePopupAmountProduct(false);
         handleZoomImageProduct($('#popupDetailProduct [data-fancybox]'), previewPhoto, previewThumb);
         handleChooseColorProduct(previewPhoto, previewThumb);
     });
 }
 
-const handlePopupDetailAmountProduct = function () {
+const handlePopupAmountProduct = function (cart = false) {
     $('.amount-button').click(function (e) {
         let type = parseInt($(this).attr('data-type')),
             inputAmount = $(this).parent().find('.amount-input'),
@@ -119,9 +139,23 @@ const handlePopupDetailAmountProduct = function () {
             value += 1;
             inputAmount.val(value);
         } else if (type == 0) {
-            if (value > 1) {
-                value -= 1;
-                inputAmount.val(value);
+            if (!cart) {
+                if (value > 1) {
+                    value -= 1;
+                    inputAmount.val(value);
+                }
+            } else {
+                let elm = $(this),
+                    elmItem = elm.closest('.cart-body_list__item'),
+                    elmWrapItem = elmItem.closest('.float-cart_body');
+                elmItem.fadeOut(function () {
+                    $.when(elmItem.remove()).then(function () {
+                        if (elmWrapItem.find('.cart-body_list__item').length == 0) {
+                            elmWrapItem.hide();
+                            elmWrapItem.closest('.float-cart').find('.float-cart_empty').show();
+                        }
+                    });
+                });
             }
         }
     });
@@ -198,6 +232,8 @@ $(function () {
     handlePopupDetailProduct();
     handleFloatCurrency();
     handleFloatLocation();
+    handleFloatCart();
+    handleTriggerOverlay();
     AOS.init({
         easing: "ease-out-quad",
         once: !0,
