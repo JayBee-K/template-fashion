@@ -3,6 +3,9 @@ const handleTouchMove = function (ev) {
     ev.preventDefault();
 }
 
+// ======================================
+// Hover Navigation
+// ======================================
 const handleIsHoverNavigation = function () {
     $('#header-navigation > li').hover(function () {
         $(this).addClass('is-hover');
@@ -11,6 +14,56 @@ const handleIsHoverNavigation = function () {
     });
 };
 
+// ======================================
+// Sticky Header
+// ======================================
+const handleStickyHeader = function () {
+    let body = document.body,
+        html = document.documentElement,
+        height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    if ($('#sidebar-sticky').length > 0)
+        $('#sidebar-sticky').css('top', '5px');
+
+    if ($('#product-preview').length > 0)
+        $('#product-preview').css('top', '5px');
+
+    if ($('#cart-sidebar').length > 0)
+        $('#cart-sidebar').css('top', '5px');
+
+    if (height > (screen.height + 300)) {
+        $(window).scroll(function () {
+            let top = $(document).scrollTop();
+            let height = $('#header').height();
+
+            if (top > height) {
+                $('#header').addClass('header-sticky');
+                if ($('#sidebar-sticky').length > 0)
+                    $('#sidebar-sticky').css('top', ($('#header').height() + 10) + 'px');
+
+                if ($('#product-preview').length > 0)
+                    $('#product-preview').css('top', ($('#header').height() + 10) + 'px');
+
+                if ($('#cart-sidebar').length > 0)
+                    $('#cart-sidebar').css('top', ($('#header').height() + 10) + 'px');
+            } else {
+                $('#header').removeClass('header-sticky');
+                if ($('#sidebar-sticky').length > 0)
+                    $('#sidebar-sticky').css('top', '5px');
+
+                if ($('#product-preview').length > 0)
+                    $('#product-preview').css('top', '5px');
+
+                if ($('#cart-sidebar').length > 0)
+                    $('#cart-sidebar').css('top', '5px');
+            }
+        });
+    }
+}
+
+// ======================================
+// Slide
+// ======================================
 const slideHeader = function () {
     new Swiper('#header-slide', {
         loop: true,
@@ -23,7 +76,9 @@ const slideBanner = function () {
     });
 }
 
-
+// ======================================
+// Float current
+// ======================================
 const handleFloatCurrency = function () {
     $('.float-currency_current').click(function () {
         if ($(this).parent().hasClass('show')) {
@@ -48,6 +103,9 @@ const handleFloatCurrency = function () {
     });
 }
 
+// ======================================
+// Float Location
+// ======================================
 const handleFloatLocation = function () {
     $('.float-location_list > .float-location_list__inner > a').click(function () {
         if ($(this).hasClass('active')) {
@@ -72,11 +130,13 @@ const handleFloatLocation = function () {
     });
 }
 
+// ======================================
+// Cart
+// ======================================
 const handleFloatCart = function () {
     $('.call-cart').click(function () {
-        $('body').addClass('body-open');
-
-        handlePopupAmountProduct(true);
+        $('body').addClass('body-open_cart');
+        handleAmountProduct(true);
         handleCloseCart();
     });
 }
@@ -87,13 +147,126 @@ const handleCloseCart = function () {
     });
 }
 
+// ======================================
+// Click Overlay
+// ======================================
 const handleTriggerOverlay = function () {
-    $('#float-overlay').click(() => $('body').removeClass('body-open'));
+    $('#float-overlay').click(() => $('body').removeClass('body-open_cart body-open_search'));
 }
 
-/*
- Popup Detail
- */
+// ======================================
+// Search
+// ======================================
+const handleSearch = function () {
+    $('.call-search').click(function () {
+        $('body').addClass('body-open_search');
+        $('.float-search .search-form .search-inner').css('height', $('.header-top').height() + $('.header-navigation').height());
+    });
+
+    $('#search-input').keyup(function () {
+        if ($(this).val() !== '') {
+            setTimeout(function () {
+                $('#search-result').fadeIn();
+            }, 500);
+        }
+    });
+
+    handleCloseSearch();
+}
+const handleCloseSearch = function () {
+    $('#close-search').click(function () {
+        $('#float-overlay').trigger('click');
+    });
+}
+
+// ======================================
+// Detail Product
+// ======================================
+const handleDetailProduct = function () {
+    if ($('#product-detail').length > 0) {
+        const previewThumb = new Swiper('#detail-preview_thumb', {
+            loopAdditionalSlides: 0,
+            spaceBetween: 15,
+            slidesPerView: 4.5,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            slideToClickedSlide: true,
+            direction: "vertical",
+        });
+
+        const previewPhoto = new Swiper('#detail-preview_photo', {
+            thumbs: {
+                swiper: previewThumb,
+            },
+        });
+
+        handleAmountProduct(false);
+        handleZoomImageProduct($('#product-detail [data-fancybox]'), previewPhoto, previewThumb, true);
+        handleChooseColorProduct($('input[name="detail-choose_color"]'), $('#detail-color_text'), previewPhoto, previewThumb);
+        handleRateStar();
+
+        $('.call-modal_review').click(function () {
+            let index = $(this).attr('data-index'),
+                elmWrapper = $('#popupReview'),
+                elmSlide = '#popupReview .review-slide',
+                nextSlide = '#popupReview .button-next',
+                prevSlide = '#popupReview .button-prev';
+
+            const reviewSlide = new Swiper(elmSlide, {
+                allowTouchMove: false,
+                effect: 'fade',
+                navigation: {
+                    nextEl: nextSlide,
+                    prevEl: prevSlide,
+                }
+            });
+            reviewSlide.slideTo(index - 1);
+            elmWrapper.modal('show');
+        });
+
+        $('#create-review').click(function () {
+            $(this).hide();
+            $('#review-form').fadeIn();
+        });
+        $('#close-review').click(function () {
+            $('#review-form').hide();
+            $('#create-review').fadeIn();
+        });
+    }
+}
+
+const handleRateStar = function () {
+    $('.rate-before  svg').click(function () {
+        let index = $(this).attr('data-index');
+        $('.rate-after').css('width', (index * 20) + '%');
+    });
+    $('.rate-after svg').click(function () {
+        let index = $(this).attr('data-index');
+        $('.rate-after').css('width', ((index - 1) * 20) + '%');
+    });
+}
+
+// ======================================
+// Page Cart
+// ======================================
+const handlePageCart = function () {
+    if ($('#page-cart').length > 0) {
+        handleAmountProduct();
+
+        $('.cart-remove').click(function () {
+            let elmWrapper = $(this).closest('.cart-list_item');
+            elmWrapper.fadeIn(function () {
+                elmWrapper.remove();
+            })
+        });
+    }
+}
+
+
+// ======================================
+// Popup Product
+// ======================================
 const handlePopupDetailProduct = function () {
     $('#popupDetailProduct').on('hide.bs.modal', function () {
         $(this).addClass('modal-hide');
@@ -116,7 +289,6 @@ const handlePopupDetailProduct = function () {
             direction: "vertical",
         });
 
-
         const previewPhoto = new Swiper('#preview-photo', {
             thumbs: {
                 swiper: previewThumb,
@@ -124,13 +296,17 @@ const handlePopupDetailProduct = function () {
         });
 
         $('#popupDetailProduct').modal('show');
-        handlePopupAmountProduct(false);
-        handleZoomImageProduct($('#popupDetailProduct [data-fancybox]'), previewPhoto, previewThumb);
-        handleChooseColorProduct(previewPhoto, previewThumb);
+        handleAmountProduct(false);
+        handleZoomImageProduct($('#popupDetailProduct [data-fancybox]'), previewPhoto, previewThumb, false);
+        handleChooseColorProduct($('input[name="choose-color"]'), $('#color-text'), previewPhoto, previewThumb);
     });
 }
 
-const handlePopupAmountProduct = function (cart = false) {
+// ======================================
+// Amount Product
+// ======================================
+
+const handleAmountProduct = function (cart = false) {
     $('.amount-button').click(function (e) {
         let type = parseInt($(this).attr('data-type')),
             inputAmount = $(this).parent().find('.amount-input'),
@@ -167,7 +343,10 @@ const handlePopupAmountProduct = function (cart = false) {
     });
 };
 
-const handleZoomImageProduct = function (elm, previewPhoto, previewThumb) {
+// ======================================
+// Zoom Fancy Product
+// ======================================
+const handleZoomImageProduct = function (elm, previewPhoto, previewThumb, type = true) {
     let wrapButton = `<div class="custom-button_wrapper">
 							<a data-fancybox-prev class="custom-arrow_fancybox button-prev" href="javascript:;"><i class="fal fa-angle-left"></i></a>
                             <a data-fancybox-close class="custom-close_fancybox button-close" href="javascript:;"><i class="fal fa-times"></i></a>
@@ -175,9 +354,15 @@ const handleZoomImageProduct = function (elm, previewPhoto, previewThumb) {
                         </div>`;
 
     let i = 0;
-    $('[data-fancybox=popupDetailGallery]').click(function () {
-        i = 0;
-    });
+    if (type) {
+        $('[data-fancybox=detailGallery]').click(function () {
+            i = 0;
+        });
+    } else {
+        $('[data-fancybox=popupDetailGallery]').click(function () {
+            i = 0;
+        });
+    }
 
     elm.fancybox({
         loop: false,
@@ -195,11 +380,18 @@ const handleZoomImageProduct = function (elm, previewPhoto, previewThumb) {
             }
         },
         beforeShow: function (instance, current) {
-            handleMoveSlide(previewPhoto, previewThumb, $(`[data-fancybox='popupDetailGallery'][href='${current.src}']`).attr('data-index'));
+            if (type) {
+                handleMoveSlide(previewPhoto, previewThumb, $(`[data-fancybox='detailGallery'][href='${current.src}']`).attr('data-index'));
+            } else {
+                handleMoveSlide(previewPhoto, previewThumb, $(`[data-fancybox='popupDetailGallery'][href='${current.src}']`).attr('data-index'));
+            }
         },
     });
 }
 
+// ======================================
+// Move Slide Product
+// ======================================
 const handleMoveSlide = function (previewPhoto, previewThumb, index) {
     previewPhoto.slideTo(index - 1);
     previewThumb.slideTo(index - 1);
@@ -208,11 +400,14 @@ const handleMoveSlide = function (previewPhoto, previewThumb, index) {
     previewThumb.translateTo(indexItemThumb * -heightItemThumb, 150, false, false);
 }
 
-const handleChooseColorProduct = function (previewPhoto, previewThumb) {
-    $('input[name="choose-color"]').change(function () {
+// ======================================
+// Choose color Product
+// ======================================
+const handleChooseColorProduct = function (input, elm, previewPhoto, previewThumb) {
+    input.change(function () {
         let image = $(this).attr('data-image');
         let color = $(this).attr('data-color');
-        $('#color-text').html(color);
+        elm.html(color);
         $(previewPhoto.slides).map(function () {
             if ($(this).find('.preview-photo_item > a').attr('href') == image) {
                 handleMoveSlide(previewPhoto, previewThumb, $(this).find('.preview-photo_item > a').attr('data-index'));
@@ -221,19 +416,21 @@ const handleChooseColorProduct = function (previewPhoto, previewThumb) {
     });
 }
 
-/*
-End Popup Detail
- */
 
 $(function () {
     handleIsHoverNavigation();
-    slideHeader();
-    slideBanner();
+    handleStickyHeader();
+    handleDetailProduct();
     handlePopupDetailProduct();
     handleFloatCurrency();
     handleFloatLocation();
     handleFloatCart();
     handleTriggerOverlay();
+    handleSearch();
+    handlePageCart();
+
+    slideHeader();
+    slideBanner();
     AOS.init({
         easing: "ease-out-quad",
         once: !0,

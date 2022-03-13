@@ -509,182 +509,944 @@
 </header>
 
 <div class="main">
-    <div class="page-article">
+    <div class="page-category">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="theme-breadcrumb">
-                        <ol class="breadcrumb bg-transparent p-0 rounded-0 mb-0 justify-content-center">
-                            <li class="breadcrumb-item">
-                                <a href="#">Trang chủ</a>
-                            </li>
-                            <li class="breadcrumb-item active">CHÍNH SÁCH BẢO MẬT</li>
-                        </ol>
+            <div class="row">
+                <div class="col-lg-20">
+                    <div class="category-sidebar" id="sidebar-sticky">
+                        <div class="sidebar-inner">
+                            <div class="sidebar-item sidebar-tag">
+                                <div class="list-tag" id="list-tag">
+                                    <div class="list-tag_item">
+                                        <a href="javascript:void(0)"
+                                           class="btn-theme btn-theme_effect btn-theme_dark btn-theme_full btn-theme_small btn-theme_effect">
+                                            T-Shirt
+                                            <i class="fal fa-times"></i>
+                                        </a>
+                                    </div>
+                                    <div class="list-tag_item">
+                                        <a href="javascript:void(0)"
+                                           class="btn-theme btn-theme_effect btn-theme_dark btn-theme_full btn-theme_small btn-theme_effect">
+                                            Màu đỏ
+                                            <i class="fal fa-times"></i>
+                                        </a>
+                                    </div>
+                                    <div class="list-tag_item">
+                                        <a href="javascript:void(0)"
+                                           class="btn-theme btn-theme_effect btn-theme_dark btn-theme_full btn-theme_small btn-theme_effect">
+                                            2XL
+                                            <i class="fal fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-title">
+                                    <a href="#listCategory" data-toggle="collapse">
+                                        Loại sản phẩm
+                                    </a>
+                                </div>
+                                <div class="sidebar-collapse collapse" id="listCategory">
+                                    <div class="sidebar-list list-category">
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="baseball-jacket" name="filter-category">
+                                            <label for="baseball-jacket">
+                                                Baseball Jacket (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="blazer" name="filter-category">
+                                            <label for="blazer">
+                                                Blazer (2)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="blouse" name="filter-category">
+                                            <label for="blouse">
+                                                Blouse (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="bottoms" name="filter-category">
+                                            <label for="bottoms">
+                                                Bottoms (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="dress" name="filter-category">
+                                            <label for="dress">
+                                                Dress (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="earring" name="filter-category">
+                                            <label for="earring">
+                                                Earring (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="hair-clip" name="filter-category">
+                                            <label for="hair-clip">
+                                                Hair Clip (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="hoodie" name="filter-category">
+                                            <label for="hoodie">
+                                                Hoodie (7)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="hoodie-cardigan" name="filter-category">
+                                            <label for="hoodie-cardigan">
+                                                Hoodie Cardigan (4)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="jacket" name="filter-category">
+                                            <label for="jacket">
+                                                Jacket (2)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="jumsuit" name="filter-category">
+                                            <label for="jumsuit">
+                                                Jumpsuit (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-category_item">
+                                            <input type="checkbox" id="womems-sleepwears" name="filter-category">
+                                            <label for="womems-sleepwears">
+                                                Women's sleepwears(set) (5)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-title">
+                                    <a href="#listColor" data-toggle="collapse">
+                                        COLOR
+                                    </a>
+                                </div>
+                                <div class="sidebar-collapse collapse" id="listColor">
+                                    <div class="sidebar-list list-color">
+                                        <div class="list-color_item">
+                                            <input type="checkbox" id="cam" name="filter-color">
+                                            <label for="cam" style="--background-color:#f67003;">
+                                                Cam (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-color_item">
+                                            <input type="checkbox" id="hong" name="filter-color">
+                                            <label for="hong" style="--background-color:#fb89a9;">
+                                                Hồng (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-color_item">
+                                            <input type="checkbox" id="den" name="filter-color">
+                                            <label for="den" style="--background-color:#000;">
+                                                Đen (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-color_item">
+                                            <input type="checkbox" id="trang" name="filter-color">
+                                            <label for="trang" style="--background-color:#fff;">
+                                                Trắng (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-color_item">
+                                            <input type="checkbox" id="xanhden" name="filter-color">
+                                            <label for="xanhden" style="--background-color:#1c497b;">
+                                                Xanh đen (1)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-title">
+                                    <a href="#listSize" data-toggle="collapse">
+                                        Size
+                                    </a>
+                                </div>
+                                <div class="sidebar-collapse collapse" id="listSize">
+                                    <div class="sidebar-list list-size">
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="xs" name="filter-size">
+                                            <label for="xs">
+                                                XS (1)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="s" name="filter-size">
+                                            <label for="s">
+                                                S (2)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="m" name="filter-size">
+                                            <label for="m">
+                                                M (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="l" name="filter-size">
+                                            <label for="l">
+                                                L (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="xl" name="filter-size">
+                                            <label for="xl">
+                                                XL (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="2xl" name="filter-size">
+                                            <label for="2xl">
+                                                2XL (10)
+                                            </label>
+                                        </div>
+                                        <div class="list-size_item">
+                                            <input type="checkbox" id="freesize" name="filter-size">
+                                            <label for="freesize">
+                                                FREESIZE (3)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="article-inner">
-                        <h1 class="article-title">
-                            CHÍNH SÁCH BẢO MẬT
-                        </h1>
-                        <div class="article-content">
-                            <h2>1. Mục đích và phạm vi thu thập thông tin</h2>
-                            <p>
-                                - Công ty không bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng thu thập trên
-                                trang Fashionmida.vn cho một bên thứ ba nào khác.
-                            </p>
-                            <p>
-                                - Khi Khách hàng liên hệ đăng ký dịch vụ, thông tin cá nhân mà Fashionmida.vn thu thập
-                                bao gồm:
-                            </p>
-                            <p>
-                                (i) Họ và tên;
-                            </p>
-                            <p>
-                                (ii) Địa chỉ Email
-                            </p>
-                            <p>
-                                (iii) Số điện thoại;
-                            </p>
-                            <p>
-                                (iv) Địa chỉ giao hàng;
-                            </p>
-                            <p>
-                                (v) Tài khoản ngân hàng và thông tin thanh toán;
-                            </p>
-                            <p>
-                                (vi) Thông tin được gửi bởi hoặc liên quan đến (các) thiết bị được sử dụng để truy cập
-                                vào website Fashionmida.vn;
-                            </p>
-                            <p>
-                                (vii) Dữ liệu tổng hợp về nội dung người dùng sử dụng.
-                            </p>
-                            <br>
-                            <h3>2. Phạm vi sử dụng thông tin</h3>
-                            <p>
-                                - Công ty không bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng thu thập trên
-                                trang Fashionmida.vn cho một bên thứ ba nào khác.
-                            </p>
-                            <p>
-                                - Khi Khách hàng liên hệ đăng ký dịch vụ, thông tin cá nhân mà Fashionmida.vn thu thập
-                                bao gồm:
-                            </p>
-                            <p>
-                                (i) Họ và tên;
-                            </p>
-                            <p>
-                                (ii) Địa chỉ Email
-                            </p>
-                            <p>
-                                (iii) Số điện thoại;
-                            </p>
-                            <p>
-                                (iv) Địa chỉ giao hàng;
-                            </p>
-                            <p>
-                                (v) Tài khoản ngân hàng và thông tin thanh toán;
-                            </p>
-                            <p>
-                                (vi) Thông tin được gửi bởi hoặc liên quan đến (các) thiết bị được sử dụng để truy cập
-                                vào website Fashionmida.vn;
-                            </p>
-                            <p>
-                                (vii) Dữ liệu tổng hợp về nội dung người dùng sử dụng.
-                            </p>
-                            <br>
-                            <h4>2. Phạm vi sử dụng thông tin</h4>
-                            <p>
-                                - Công ty không bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng thu thập trên
-                                trang Fashionmida.vn cho một bên thứ ba nào khác.
-                            </p>
-                            <p>
-                                - Khi Khách hàng liên hệ đăng ký dịch vụ, thông tin cá nhân mà Fashionmida.vn thu thập
-                                bao gồm:
-                            </p>
-                            <p>
-                                (i) Họ và tên;
-                            </p>
-                            <p>
-                                (ii) Địa chỉ Email
-                            </p>
-                            <p>
-                                (iii) Số điện thoại;
-                            </p>
-                            <p>
-                                (iv) Địa chỉ giao hàng;
-                            </p>
-                            <p>
-                                (v) Tài khoản ngân hàng và thông tin thanh toán;
-                            </p>
-                            <p>
-                                (vi) Thông tin được gửi bởi hoặc liên quan đến (các) thiết bị được sử dụng để truy cập
-                                vào website Fashionmida.vn;
-                            </p>
-                            <p>
-                                (vii) Dữ liệu tổng hợp về nội dung người dùng sử dụng.
-                            </p>
-                            <br>
-                            <h5>2. Phạm vi sử dụng thông tin</h5>
-                            <p>
-                                - Công ty không bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng thu thập trên
-                                trang Fashionmida.vn cho một bên thứ ba nào khác.
-                            </p>
-                            <p>
-                                - Khi Khách hàng liên hệ đăng ký dịch vụ, thông tin cá nhân mà Fashionmida.vn thu thập
-                                bao gồm:
-                            </p>
-                            <p>
-                                (i) Họ và tên;
-                            </p>
-                            <p>
-                                (ii) Địa chỉ Email
-                            </p>
-                            <p>
-                                (iii) Số điện thoại;
-                            </p>
-                            <p>
-                                (iv) Địa chỉ giao hàng;
-                            </p>
-                            <p>
-                                (v) Tài khoản ngân hàng và thông tin thanh toán;
-                            </p>
-                            <p>
-                                (vi) Thông tin được gửi bởi hoặc liên quan đến (các) thiết bị được sử dụng để truy cập
-                                vào website Fashionmida.vn;
-                            </p>
-                            <p>
-                                (vii) Dữ liệu tổng hợp về nội dung người dùng sử dụng.
-                            </p>
-                            <br>
-                            <h6>2. Phạm vi sử dụng thông tin</h6>
-                            <p>
-                                - Công ty không bán, chia sẻ hay trao đổi thông tin cá nhân của Khách hàng thu thập trên
-                                trang Fashionmida.vn cho một bên thứ ba nào khác.
-                            </p>
-                            <p>
-                                - Khi Khách hàng liên hệ đăng ký dịch vụ, thông tin cá nhân mà Fashionmida.vn thu thập
-                                bao gồm:
-                            </p>
-                            <p>
-                                (i) Họ và tên;
-                            </p>
-                            <p>
-                                (ii) Địa chỉ Email
-                            </p>
-                            <p>
-                                (iii) Số điện thoại;
-                            </p>
-                            <p>
-                                (iv) Địa chỉ giao hàng;
-                            </p>
-                            <p>
-                                (v) Tài khoản ngân hàng và thông tin thanh toán;
-                            </p>
-                            <p>
-                                (vi) Thông tin được gửi bởi hoặc liên quan đến (các) thiết bị được sử dụng để truy cập
-                                vào website Fashionmida.vn;
-                            </p>
-                            <p>
-                                (vii) Dữ liệu tổng hợp về nội dung người dùng sử dụng.
-                            </p>
+                </div>
+                <div class="col-lg-80">
+                    <div class="row row-col-g1 mb-3 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="category-text">
+                                179 sản phẩm
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <div class="theme-dropdown dropdown">
+                                <button type="button" class="dropdown-toggle btn-dropdown" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Ngày (từ mới đến cũ)
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <button class="dropdown-item" type="button">Loại</button>
+                                    <button class="dropdown-item" type="button">Nổi bật</button>
+                                    <button class="dropdown-item" type="button">Bán chạy</button>
+                                    <button class="dropdown-item" type="button">Giá từ thấp đến cao</button>
+                                    <button class="dropdown-item" type="button">Giá từ cao đến thấp</button>
+                                    <button class="dropdown-item" type="button">Ngày (từ mới đến cũ)</button>
+                                    <button class="dropdown-item" type="button">Ngày (từ cũ đến mới)</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-lg-4 row-col-g1">
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                    <div class="card-header-badge">
+                                        Ưu đãi
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                            <div class="card-price_sale">
+                                                Giảm 10%
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                    <div class="card-header-badge">
+                                        Ưu đãi
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                            <div class="card-price_sale">
+                                                Giảm 10%
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                    <div class="card-header-badge">
+                                        Ưu đãi
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                            <div class="card-price_sale">
+                                                Giảm 10%
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                    <div class="card-header-badge">
+                                        Ưu đãi
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                            <div class="card-price_sale">
+                                                Giảm 10%
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/1-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/1-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col product-aos aos-init" data-aos="product-list-4">
+                            <div class="product-card card">
+                                <div class="card-header">
+                                    <a href="" class="aos-image">
+                                        <img src="./assets/images/product/2-before.jpg"
+                                             class="img-before img-fluid lazy"
+                                             alt="">
+                                        <img src="./assets/images/product/2-after.jpg" class="img-after img-fluid"
+                                             alt="">
+                                    </a>
+                                    <div class="card-header_btn">
+                                        <a href="javascript:void(0)" class="btn-quick_view">
+                                            Xem nhanh
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <a href="">
+                                            Đầm Suông Nữ Maxi Cổ V Tay Dài Hoa Nhí
+                                        </a>
+                                    </div>
+                                    <div class="card-price">
+                                        <a href="">
+                                            <div class="card-price_current">
+                                                269.000đ
+                                            </div>
+                                            <div class="card-price_old">
+                                                299.000đ
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-colors">
+                                        <span class="card-color" style="background-color: #000;"></span>
+                                        <span class="card-color" style="background-color: #000fff;"></span>
+                                        <span class="card-color" style="background-color: #ff0000;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-col-g1">
+                        <div class="col-12">
+                            <div class="theme-pagination">
+                                <ul class="pagination">
+                                    <li class="page-item page-prev">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <i class="fal fa-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">4</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">
+                                            ...
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">113</a>
+                                    </li>
+                                    <li class="page-item page-next">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <i class="fal fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -916,7 +1678,7 @@
                                             <input type="radio" data-image="./assets/images/product/detail/4.png"
                                                    data-color="vàng"
                                                    id="color-vang" name="choose-color" value="">
-                                            <label for="color-vang">
+                                            <label for="color-vang" class="disabled">
                                                 <img src="./assets/images/product/detail/4.png" alt="">
                                             </label>
                                         </div>
@@ -941,7 +1703,7 @@
                                         </div>
                                         <div class="size-item theme-check">
                                             <input type="radio" id="size-xl" name="choose-size" value="XL">
-                                            <label for="size-xl">
+                                            <label for="size-xl" class="disabled">
                                                 XL
                                             </label>
                                         </div>
@@ -1629,7 +2391,6 @@
 </div>
 
 <div id="float-overlay" class="float-overlay"></div>
-
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
