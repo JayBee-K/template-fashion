@@ -42,54 +42,148 @@
 <body>
 
 <div class="page-checkout">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="page-checkout_form">
-					<div class="checkout-logo">
-						<a href="">
-							<img src="./assets/images/logo-chekcout.webp" alt="">
-						</a>
-					</div>
-					<div class="theme-breadcrumb">
-						<ol class="breadcrumb bg-transparent p-0 rounded-0 mb-0">
-							<li class="breadcrumb-item">
-								<a href="#">Trang chủ</a>
-							</li>
-							<li class="breadcrumb-item active">
-								<a href="">Thông tin</a>
-							</li>
-							<li class="breadcrumb-item">
-								<a href="">Vận chuyển</a>
-							</li>
-							<li class="breadcrumb-item">
-								<a href="">Thanh toán</a>
-							</li>
-						</ol>
-					</div>
-					<div class="section-heading text-left">
-						<h2 class="section-heading_title mb-0">
-							Thông tin liên hệ
-						</h2>
-					</div>
-					<div class="checkout-user">
-						<div class="user-image">
-							<img src="./assets/images/user.png" alt="">
-						</div>
-						<div class="user-content">
-							<div class="user-title">
-								An Nguyễn Nam (nannam@gmail.com)
-							</div>
-							<div class="user-link">
-								<a href="">
-									Log out
-								</a>
-							</div>
-						</div>
-					</div>
+	<div class="page-checkout_form">
+		<div class="checkout-logo">
+			<a href="">
+				<img src="./assets/images/logo-chekcout.webp" alt="">
+			</a>
+		</div>
+		<div class="theme-breadcrumb">
+			<ol class="breadcrumb bg-transparent p-0 rounded-0 mb-0">
+				<li class="breadcrumb-item">
+					<a href="#">Trang chủ</a>
+				</li>
+				<li class="breadcrumb-item active">
+					<a href="">Thông tin</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="">Vận chuyển</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="">Thanh toán</a>
+				</li>
+			</ol>
+		</div>
+		<div class="section-heading text-left">
+			<h3 class="section-heading_title mb-0">
+				Thông tin liên hệ
+			</h3>
+		</div>
+		<div class="checkout-user">
+			<div class="user-image" style="background-image: url('/assets/images/user.png')"></div>
+			<div class="user-content">
+				<div class="user-title">
+					An Nguyễn Nam (nannam@gmail.com)
+				</div>
+				<div class="user-link">
+					<a href="">
+						Log out
+					</a>
 				</div>
 			</div>
-			<div class="col-lg-6"></div>
+		</div>
+		<div class="checkout-subscribe">
+			<input type="checkbox" id="subscribe">
+			<span class="checkbox-icon"></span>
+			<label for="subscribe">
+				Gửi cho tôi tin tức và ưu đãi qua email
+			</label>
+		</div>
+		<div class="section-heading text-left">
+			<h3 class="section-heading_title mb-0">
+				Địa chỉ vận chuyển
+			</h3>
+		</div>
+		<div class="checkout-form">
+			<form action="">
+				<div class="checkout-form_inner">
+					<label class="checkout-form_inner__label" for="">
+						Địa chỉ đã lưu
+					</label>
+					<select name="" class="checkout-form_inner__input checkout-form_inner__input--select" id="">
+						<option value="">145A Nguyễn Bỉnh Khiêm, Châu Thành, An Giang</option>
+						<option value="">Việt Nam</option>
+						<option value="" selected>Sử dụng địa chỉ đã lưu</option>
+					</select>
+					<div class="checkout-form_inner__caret">
+						<i class="fas fa-caret-down"></i>
+					</div>
+				</div>
+				<div class="checkout-form_inner">
+					<label class="checkout-form_inner__label" for="">
+						Quốc gia/Vùng
+					</label>
+					<select name="" class="checkout-form_inner__input checkout-form_inner__input--select" id="">
+						<option value="" selected>Việt Nam</option>
+						<option disabled="disabled" value="---">---</option>
+						<option value="">Malaysia</option>
+						<option value="">Philippines</option>
+						<option value="">Thái Lan</option>
+					</select>
+					<div class="checkout-form_inner__caret">
+						<i class="fas fa-caret-down"></i>
+					</div>
+				</div>
+				<div class="checkout-form_grid__2">
+					<div class="checkout-form_inner">
+						<label class="checkout-form_inner__label" for="">
+							Tên (không bắt buộc)
+						</label>
+						<input type="text" class="checkout-form_inner__input">
+					</div>
+					<div class="checkout-form_inner">
+						<label class="checkout-form_inner__label" for="">
+							Họ
+						</label>
+						<input type="text" class="checkout-form_inner__input">
+					</div>
+				</div>
+				<div class="checkout-form_inner">
+					<label class="checkout-form_inner__label" for="">
+						Địa chỉ
+					</label>
+					<input type="text" class="checkout-form_inner__input">
+				</div>
+				<div class="checkout-form_inner">
+					<label class="checkout-form_inner__label" for="">
+						Căn hộ, tòa, v.v. (không bắt buộc)
+					</label>
+					<input type="text" class="checkout-form_inner__input">
+				</div>
+				<div class="checkout-form_grid__2">
+					<div class="checkout-form_inner">
+						<label class="checkout-form_inner__label" for="">
+							Thành phố
+						</label>
+						<input type="text" class="checkout-form_inner__input">
+					</div>
+					<div class="checkout-form_inner">
+						<label class="checkout-form_inner__label" for="">
+							Mã bưu chính
+						</label>
+						<input type="text" class="checkout-form_inner__input">
+					</div>
+				</div>
+				<div class="checkout-form_inner">
+					<label class="checkout-form_inner__label" for="">
+						Điện thoại
+					</label>
+					<input type="text" class="checkout-form_inner__input checkout-form_inner__input--select">
+					<div class="checkout-form_inner__icon" data-toggle="tooltip"
+						 title="Trong trường hợp chúng tôi cần liên hệ với bạn để trao đổi về đơn hàng">
+						<i class="fas fa-question-circle"></i>
+					</div>
+				</div>
+				<div class="checkout-form_buttons">
+					<button type="submit" class="btn-theme btn-theme_effect btn-theme_full btn-theme_dark rounded-lg">
+						Chuyển đến phần vận chuyển
+					</button>
+					<a href="" class="checkout-form_button__link">Quay về giỏ hàng</a>
+				</div>
+				<div class="checkout-form_footer">
+					Mọi quyền được bảo lưu FashionMida
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
