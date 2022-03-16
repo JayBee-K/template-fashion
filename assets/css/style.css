@@ -4718,6 +4718,14 @@ button {
     .page-checkout .checkout-payment .collapse-payment_item .checkout-payment_bank__inner {
         padding: 30px;
     }
+
+    .body-open_search,
+    .body-open_cart,
+    .body-open_category,
+    .body-open_navigation {
+        overflow: hidden;
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 767px) {
