@@ -44,7 +44,7 @@
     <div class="header-top">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-3">
                     <div class="header-top_search">
                         <a class="call-search" href="javascript:void(0)">
                             <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search"
@@ -53,15 +53,23 @@
                             </svg>
                         </a>
                     </div>
+                    <div class="header-top_hamburger d-block d-lg-none">
+                        <button id="call-navigation" type="button">
+                            <svg aria-hidden="true" focusable="false" role="presentation"
+                                 viewBox="0 0 64 64">
+                                <path d="M7 15h51M7 32h43M7 49h51"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-6">
                     <div class="header-top_logo">
                         <a href="">
                             <img src="./assets/images/logo.png" class="img-fluid" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-3">
                     <div class="header-top_icons">
                         <a class="d-none d-lg-block" href="">
                             <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-user"
@@ -93,13 +101,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 position-static">
-                    <div class="header-navigation_inner">
-                        <ul class="list-unstyled mb-0" id="header-navigation">
+                    <div class="header-navigation_inner" id="header-navigation">
+                        <ul class="list-unstyled mb-0">
                             <li>
                                 <a href="">
                                     Hàng mới
                                 </a>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="list-unstyled mb-0 header-navigation_sub__list">
                                     <li>
                                         <a href="">Đầm</a>
                                     </li>
@@ -140,7 +148,7 @@
                                 <a href="">
                                     COOL TEE
                                 </a>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="list-unstyled mb-0 header-navigation_sub__list">
                                     <li>
                                         <a href="">Đầm</a>
                                     </li>
@@ -182,7 +190,7 @@
                                     <b>Hàng Bán Chạy</b>
                                     <img src="./assets/images/menu/hot.png">
                                 </a>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="list-unstyled mb-0 header-navigation_sub__list">
                                     <li>
                                         <a href="">Đầm</a>
                                     </li>
@@ -224,7 +232,7 @@
                                     <b class="menu-red">Chọn quần áo theo tâm trạng</b>
                                     <img src="./assets/images/menu/heart.png">
                                 </a>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="list-unstyled mb-0 header-navigation_sub__list">
                                     <li>
                                         <a href="">Đầm</a>
                                     </li>
@@ -270,9 +278,9 @@
                                 <a href="">
                                     Danh mục
                                 </a>
-                                <div class="navigation-sub_inner">
+                                <div class="navigation-sub_inner header-navigation_sub__list">
                                     <div class="container">
-                                        <div class="row justify-content-center row-cols-lg-5">
+                                        <div class="row justify-content-center row-cols-1 row-cols-lg-5">
                                             <div class="col">
                                                 <div class="sub-item sub-delay-1">
                                                     <a href="">Áo</a>
@@ -464,7 +472,7 @@
                                 <a href="">
                                     Mua theo màu
                                 </a>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="list-unstyled mb-0 header-navigation_sub__list">
                                     <li>
                                         <a href="">Đầm</a>
                                     </li>
@@ -501,6 +509,33 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header-bottom_item">
+                        <a href="">
+                            <img src="./assets/images/icon/header-bottom-left.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="header-bottom_item">
+                        <a href="">
+                            <img src="./assets/images/icon/header-bottom-center.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="header-bottom_item">
+                        <a href="">
+                            <img src="./assets/images/icon/header-bottom-right.webp" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2706,10 +2741,10 @@
     </div>
     <div class="search-result" id="search-result" style="display:none;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-9">
+            <div class="row row-col-g1">
+                <div class="col-lg-9 col-md-8">
                     <div class="row row-col-g1">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="product-card card">
                                 <div class="card-header">
                                     <a href="" class="aos-image">
@@ -2726,7 +2761,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="product-card card">
                                 <div class="card-header">
                                     <a href="" class="aos-image">
@@ -2743,7 +2778,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="product-card card">
                                 <div class="card-header">
                                     <a href="" class="aos-image">
@@ -2760,7 +2795,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="product-card card">
                                 <div class="card-header">
                                     <a href="" class="aos-image">
@@ -2779,7 +2814,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="search-list">
                         <div class="search-list_title">
                             Bộ sưu tâp
