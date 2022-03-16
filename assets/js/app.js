@@ -42,8 +42,6 @@ const handleInitNavigationMobile = function () {
 		$('#close-navigation').click(function () {
 			$('#float-overlay').trigger('click');
 		});
-
-		handleTriggerOverlay(true);
 	}
 }
 
@@ -196,14 +194,10 @@ const handleCloseCart = function () {
 // ======================================
 // Click Overlay
 // ======================================
-const handleTriggerOverlay = function (type = false) {
+const handleTriggerOverlay = function () {
 	$('#float-overlay').click(function () {
 		$('body').removeClass('body-open_cart body-open_search body-open_category body-open_navigation');
 		document.removeEventListener('touchmove', handleTouchMove);
-
-		if(type) {
-			$('#header-navigation .collapse').collapse('hide');
-		}
 	});
 }
 
