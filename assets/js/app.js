@@ -1,6 +1,8 @@
 let windowWidth = $(window).width();
-const handleTouchMove = function (ev) {
-    ev.preventDefault();
+const handleTouchMoveNavigation = function (ev) {
+    if (!$(ev.target).closest('.body-open_navigation #header-navigation').length) {
+        ev.preventDefault();
+    }
 }
 
 const handleInitNavigationMobile = function () {
@@ -36,11 +38,12 @@ const handleInitNavigationMobile = function () {
 
         $('#call-navigation').click(function () {
             $('body').addClass('body-open_navigation');
-            document.addEventListener('touchmove', handleTouchMove, {passive: false});
+            document.addEventListener('touchmove', handleTouchMoveNavigation, {passive: false});
         });
 
         $('#close-navigation').click(function () {
             $('#float-overlay').trigger('click');
+            handleTriggerOverlay('navigation');
         });
     }
 }
@@ -185,7 +188,6 @@ const handleTouchMoveCart = function (ev) {
 
 const handleFloatCart = function () {
     $('.call-cart').click(function () {
-        alert(2);
         $('body').addClass('body-open_cart');
         handleAmountProduct(true);
         handleCloseCart();
@@ -196,23 +198,36 @@ const handleFloatCart = function () {
 const handleCloseCart = function () {
     $('#close-cart').click(function () {
         $('#float-overlay').trigger('click');
-        document.removeEventListener('touchmove', handleTouchMoveCart);
+        handleTriggerOverlay('cart');
     });
 }
 
 // ======================================
 // Click Overlay
 // ======================================
-const handleTriggerOverlay = function () {
+const handleTriggerOverlay = function (type = '') {
     $('#float-overlay').click(function () {
         $('body').removeClass('body-open_cart body-open_search body-open_category body-open_navigation');
-        document.removeEventListener('touchmove', handleTouchMove);
+        if (type == 'cart') {
+            document.removeEventListener('touchmove', handleTouchMoveCart);
+        } else if (type == 'category') {
+            document.removeEventListener('touchmove', handleTouchMoveCategory);
+        } else if (type == 'search') {
+            document.removeEventListener('touchmove', handleTouchMoveSearch);
+        } else if (type == 'navigation') {
+            document.removeEventListener('touchmove', handleTouchMoveNavigation);
+        }
     });
 }
 
 // ======================================
 // Search
 // ======================================
+const handleTouchMoveSearch = function (ev) {
+    if (!$(ev.target).closest('.body-open_search .float-search').length) {
+        ev.preventDefault();
+    }
+}
 const handleSearch = function () {
     $('.call-search').click(function () {
         $('body').addClass('body-open_search');
@@ -221,6 +236,7 @@ const handleSearch = function () {
         } else {
             $('.float-search .search-form .search-inner').css('height', $('.header-top').height());
             $('.float-search .search-form .search-inner > input, .float-search .search-form .search-inner .btn-close, .float-search .search-form .search-inner .btn-search').css('height', $('.header-top').height());
+            document.addEventListener('touchmove', handleTouchMoveSearch, {passive: false});
         }
     });
 
@@ -237,15 +253,22 @@ const handleSearch = function () {
 const handleCloseSearch = function () {
     $('#close-search').click(function () {
         $('#float-overlay').trigger('click');
+        handleTriggerOverlay('search');
     });
 }
 
 // ======================================
 // Fixed Category
 // ======================================
+const handleTouchMoveCategory = function (ev) {
+    if (!$(ev.target).closest('.body-open_category .category-sidebar').length) {
+        ev.preventDefault();
+    }
+}
 const handleCategoryFloatMobile = function () {
     $('.call-filter').click(function () {
         $('body').addClass('body-open_category');
+        document.addEventListener('touchmove', handleTouchMoveCart, {passive: false});
     });
 
     handleCloseCategoryFloatMobile();
@@ -253,6 +276,7 @@ const handleCategoryFloatMobile = function () {
 const handleCloseCategoryFloatMobile = function () {
     $('#close-category').click(function () {
         $('#float-overlay').trigger('click');
+        handleTriggerOverlay('category');
     });
 }
 // ======================================
