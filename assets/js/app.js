@@ -178,7 +178,7 @@ const handleFloatLocation = function () {
 // Cart
 // ======================================
 const handleTouchMoveCart = function (ev) {
-    if (!$(ev.target).closest('.bode-open_cart .float-cart').length) {
+    if (!$(ev.target).closest('.bode-open_cart .float-cart .float-cart_body').length) {
         ev.preventDefault();
     }
 }
