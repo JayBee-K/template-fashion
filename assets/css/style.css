@@ -4724,7 +4724,8 @@ button {
     .body-open_category,
     .body-open_navigation {
         overflow: hidden;
-        height: 100vh;
+        height: 100%;
+        position: relative;
     }
 }
 

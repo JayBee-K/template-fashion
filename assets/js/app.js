@@ -179,13 +179,14 @@ const handleFloatLocation = function () {
 // ======================================
 const handleTouchMoveCart = function (ev) {
     if (!$(ev.target).closest('.bode-open_cart .float-cart .float-cart_body').length) {
+        alert(1);
         ev.preventDefault();
     }
 }
 
 const handleFloatCart = function () {
     $('.call-cart').click(function () {
-        alert(2);
+        alert(3);
         $('body').addClass('body-open_cart');
         handleAmountProduct(true);
         handleCloseCart();
