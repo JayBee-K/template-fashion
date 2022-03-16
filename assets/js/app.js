@@ -178,15 +178,14 @@ const handleFloatLocation = function () {
 // Cart
 // ======================================
 const handleTouchMoveCart = function (ev) {
-    if (!$(ev.target).closest('.bode-open_cart .float-cart .float-cart_body').length) {
-        alert(1);
+    if (!$(ev.target).closest('.body-open_cart .float-cart').length) {
         ev.preventDefault();
     }
 }
 
 const handleFloatCart = function () {
     $('.call-cart').click(function () {
-        alert(3);
+        alert(2);
         $('body').addClass('body-open_cart');
         handleAmountProduct(true);
         handleCloseCart();
