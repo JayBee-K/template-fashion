@@ -4916,6 +4916,7 @@ button {
         font-size: 1.6em;
         opacity: .7;
         transition: var(--transition);
+        color: rgb(var(--primary-color));
     }
 
     .page-category .category-sidebar .sidebar-header .sidebar-header_close > button.active {
