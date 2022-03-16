@@ -185,7 +185,7 @@ const handleTouchMoveCart = function (ev) {
 
 const handleFloatCart = function () {
     $('.call-cart').click(function () {
-        alert(1);
+        alert(2);
         $('body').addClass('body-open_cart');
         handleAmountProduct(true);
         handleCloseCart();
