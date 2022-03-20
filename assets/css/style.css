@@ -5072,4 +5072,15 @@ button {
         margin-bottom: 25px;
         margin-top: 10px;
     }
+
+    .float-search .search-form .search-inner .btn-search {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1em;
+    }
+
+    .float-search .search-form .search-inner > input {
+        height: auto;
+        padding: 8px 0;
+    }
 }
