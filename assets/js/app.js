@@ -411,7 +411,7 @@ const handleZoomImageProduct = function (elm, previewPhoto, previewThumb, type =
         keyboard: false,
         toolbar: false,
         infobar: false,
-        touch: false,
+        touch: true,
         arrows: false,
         wheel: false,
         clickContent: false, backFocus: false,
