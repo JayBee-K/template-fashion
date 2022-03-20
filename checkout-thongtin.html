@@ -112,10 +112,11 @@
                             <div class="float-input checkout-form_inner">
                                 <select name=""
                                         class="checkout-form_inner__input float-input_item float-input_item__select"
-                                        id="">
+                                        id="selectAddress">
                                     <option value="">145A Nguyễn Bỉnh Khiêm, Châu Thành, An Giang</option>
                                     <option value="">Việt Nam</option>
                                     <option value="" selected>Sử dụng địa chỉ đã lưu</option>
+                                    <option value="-1">Sử dụng địa chỉ khác</option>
                                 </select>
                                 <label class="float-input_item__label" for="">
                                     Địa chỉ đã lưu
@@ -127,9 +128,9 @@
                             <div class="float-input checkout-form_inner">
                                 <select name=""
                                         class="checkout-form_inner__input float-input_item float-input_item__select"
-                                        id="">
+                                        id="selectLocation">
                                     <option value="" selected>Việt Nam</option>
-                                    <option disabled="disabled" value="---">---</option>
+                                    <option value="-1">---</option>
                                     <option value="">Malaysia</option>
                                     <option value="">Philippines</option>
                                     <option value="">Thái Lan</option>
@@ -143,13 +144,13 @@
                             </div>
                             <div class="checkout-form_grid__2">
                                 <div class="float-input checkout-form_inner">
-                                    <input type="text" class="checkout-form_inner__input float-input_item">
+                                    <input type="text" id="firstname" value="An" class="checkout-form_inner__input float-input_item">
                                     <label class="float-input_item__label" for="">
                                         Tên (không bắt buộc)
                                     </label>
                                 </div>
                                 <div class="float-input checkout-form_inner">
-                                    <input type="text" required
+                                    <input type="text" id="lastname" required value="Nguyễn Nam"
                                            class="checkout-form_inner__input float-input_item float-input_item__error">
                                     <label class="float-input_item__label" for="">
                                         Họ
@@ -160,33 +161,35 @@
                                 </div>
                             </div>
                             <div class="float-input checkout-form_inner">
-                                <input type="text" class="checkout-form_inner__input float-input_item">
+                                <input type="text" id="address1" value="145A Nguyễn Bỉnh Khiêm, Châu Thành, An Giang"
+                                       class="checkout-form_inner__input float-input_item">
                                 <label class="float-input_item__label" for="">
                                     Địa chỉ
                                 </label>
                             </div>
                             <div class="float-input checkout-form_inner">
-                                <input type="text" class="checkout-form_inner__input float-input_item">
+                                <input type="text" id="address2" class="checkout-form_inner__input float-input_item">
                                 <label class="float-input_item__label" for="">
                                     Căn hộ, tòa, v.v. (không bắt buộc)
                                 </label>
                             </div>
                             <div class="checkout-form_grid__2">
                                 <div class="float-input checkout-form_inner">
-                                    <input type="text" class="checkout-form_inner__input float-input_item">
+                                    <input type="text" id="city"
+                                           class="checkout-form_inner__input float-input_item">
                                     <label class="float-input_item__label" for="">
                                         Thành phố
                                     </label>
                                 </div>
                                 <div class="float-input checkout-form_inner">
-                                    <input type="text" class="checkout-form_inner__input float-input_item">
+                                    <input type="text" id="code" value="000" class="checkout-form_inner__input float-input_item">
                                     <label class="float-input_item__label" for="">
                                         Mã bưu chính
                                     </label>
                                 </div>
                             </div>
                             <div class="float-input checkout-form_inner">
-                                <input type="text"
+                                <input type="text" id="phone" value="0909090909"
                                        class="checkout-form_inner__input float-input_item float-input_item__select">
                                 <label class="float-input_item__label" for="">
                                     Điện thoại
